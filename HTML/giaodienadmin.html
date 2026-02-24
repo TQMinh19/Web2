@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản Lý</title>
+  <link rel="stylesheet" href="giaodienadmin.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Quản Lý</h2>
+      <nav>
+        <ul>
+          <li><a href="#users">Người dùng</a></li>
+          <li><a href="#categories">Loại sản phẩm</a></li>
+          <li><a href="#products">Danh mục sản phẩm</a></li>
+          <li><a href="#import">Nhập sản phẩm</a></li>
+          <li><a href="#price">Giá bán</a></li>
+          <li><a href="#orders">Đơn hàng</a></li>
+          <li><a href="#stock">Tồn kho</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <!-- Người dùng -->
+      <section id="users" class="module">
+        <h2>Quản lý khách hàng</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Họ tên</th>
+              <th>Email</th>
+              <th>Điện thoại</th>
+              <th>Trạng thái</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Nguyễn Văn An</td>
+              <td>An@gmail.com</td>
+              <td>0909123456</td>
+              <td>Mở</td>
+              <td>Reset | Khóa</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Trần Quốc Bảo</td>
+              <td>Bao@gmail.com</td>
+              <td>0912345678</td>
+              <td>Khóa</td>
+              <td>Reset | Mở</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Phan Minh Hoàng</td>
+              <td>hoang@gmail.com</td>
+              <td>0945863079</td>
+              <td>Khóa</td>
+              <td>Reset | Mở</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Loại sản phẩm -->
+      <section id="categories" class="module">
+        <h2>Quản lý loại sản phẩm</h2>
+        <form class="form">
+          <input type="text" placeholder="Tên loại sản phẩm">
+          <textarea placeholder="Mô tả"></textarea>
+          <button type="submit">Thêm / Sửa</button>
+        </form>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tên loại</th>
+              <th>Mô tả</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>LI-NING WAY OF WADE</td>
+              <td>Giày hồng mặt bên</td>
+              <td>
+
+                <input type="checkbox" id="edit-1" class="modal-toggle">
+                <label for="edit-1" class="btn edit-btn">Sửa</label>
+
+                <button class="btn delete-btn">Xóa</button>
+
+  <!-- Modal popup -->
+  <div class="modal">
+    <div class="modal-content">
+      <h3>Chỉnh sửa loại sản phẩm</h3>
+      <form>
+        <label>Tên loại sản phẩm</label>
+        <input type="text" value="LI-NING WAY OF WADE">
+
+        <label>Mô tả</label>
+        <textarea>Giày hồng mặt bên</textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn save-btn">Lưu</button>
+          <label for="edit-1" class="btn cancel-btn">Hủy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</td>
+
+            </tr>
+            
+            <tr>
+              <td>2</td>
+              <td>NIKE DUNK LOW PREMIUM "PURE PLATINUM"</td>
+              <td>Giày xám mặt bên</td>
+              <td>
+                <input type="checkbox" id="edit-2" class="modal-toggle">
+                <label for="edit-2" class="btn edit-btn">Sửa</label>
+
+                <button class="btn delete-btn">Xóa</button>
+                <div class="modal">
+                <div class="modal-content">
+                <h3>Chỉnh sửa loại sản phẩm</h3>
+                <form>
+                <label>Tên loại sản phẩm</label>
+                <input type="text" value="NIKE DUNK LOW PREMIUM 'PURE PLATINUM'">
+                <label>Mô tả</label>
+                <textarea>Giày xám mặt bên</textarea>
+                <div class="modal-actions">
+                <button type="submit" class="btn save-btn">Lưu</button>
+                <label for="edit-2" class="btn cancel-btn">Hủy</label>
+                </div>
+                </form>
+                </div>
+            </div>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>NIKE DUNK LOW WMNS "SISTERHOOD"</td>
+              <td>Giày trắng mặt bên</td>
+              <td>
+  <!-- Nút sửa -->
+  <input type="checkbox" id="edit-3" class="modal-toggle">
+  <label for="edit-3" class="btn edit-btn">Sửa</label>
+
+  <!-- Nút xóa -->
+  <button class="btn delete-btn">Xóa</button>
+
+  <!-- Modal popup -->
+  <div class="modal">
+    <div class="modal-content">
+      <h3>Chỉnh sửa loại sản phẩm</h3>
+      <form>
+        <label>Tên loại sản phẩm</label>
+        <input type="text" value="NIKE DUNK LOW WMNS 'SISTERHOOD'">
+
+        <label>Mô tả</label>
+        <textarea>Giày trắng mặt bênn</textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn save-btn">Lưu</button>
+          <label for="edit-3" class="btn cancel-btn">Hủy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</td>
+
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>NIKE KD 17 "AUNT PEARL"</td>
+              <td>Giày KD mặt bên</td>
+              <td>
+  <!-- Nút sửa -->
+  <input type="checkbox" id="edit-4" class="modal-toggle">
+  <label for="edit-4" class="btn edit-btn">Sửa</label>
+
+  <!-- Nút xóa -->
+  <button class="btn delete-btn">Xóa</button>
+
+  <!-- Modal popup -->
+  <div class="modal">
+    <div class="modal-content">
+      <h3>Chỉnh sửa loại sản phẩm</h3>
+      <form>
+        <label>Tên loại sản phẩm</label>
+        <input type="text" value="NIKE KD 17 'AUNT PEARL'">
+
+        <label>Mô tả</label>
+        <textarea>Giày KD mặt bên<</textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn save-btn">Lưu</button>
+          <label for="edit-4" class="btn cancel-btn">Hủy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</td>
+
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>NIKE LEBRON NEXXT GEN AMPD "I PROMISE"</td>
+              <td>Giày LB mặt bên</td>
+              <td>
+  <!-- Nút sửa -->
+  <input type="checkbox" id="edit-5" class="modal-toggle">
+  <label for="edit-5" class="btn edit-btn">Sửa</label>
+
+  <!-- Nút xóa -->
+  <button class="btn delete-btn">Xóa</button>
+
+  <!-- Modal popup -->
+  <div class="modal">
+    <div class="modal-content">
+      <h3>Chỉnh sửa loại sản phẩm</h3>
+      <form>
+        <label>Tên loại sản phẩm</label>
+        <input type="text" value="NIKE LEBRON NEXXT GEN AMPD 'I PROMISE'">
+
+        <label>Mô tả</label>
+        <textarea>Giày LB mặt bên</textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn save-btn">Lưu</button>
+          <label for="edit-5" class="btn cancel-btn">Hủy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</td>
+
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>NIKE LEBRON WITNESS 8</td>
+              <td>Giày witness mặt bên</td>
+              <td>
+  <!-- Nút sửa -->
+  <input type="checkbox" id="edit-6" class="modal-toggle">
+  <label for="edit-6" class="btn edit-btn">Sửa</label>
+
+  <!-- Nút xóa -->
+  <button class="btn delete-btn">Xóa</button>
+
+  <!-- Modal popup -->
+  <div class="modal">
+    <div class="modal-content">
+      <h3>Chỉnh sửa loại sản phẩm</h3>
+      <form>
+        <label>Tên loại sản phẩm</label>
+        <input type="text" value="NIKE LEBRON WITNESS 8">
+
+        <label>Mô tả</label>
+        <textarea>Giày witness mặt bên</textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn save-btn">Lưu</button>
+          <label for="edit-6" class="btn cancel-btn">Hủy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</td>
+
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>NIKE JA 1 "DAY ONE"</td>
+              <td>Giày jamorant mặt bên</td>
+             <td>
+  <!-- Nút sửa -->
+  <input type="checkbox" id="edit-7" class="modal-toggle">
+  <label for="edit-7" class="btn edit-btn">Sửa</label>
+
+  <!-- Nút xóa -->
+  <button class="btn delete-btn">Xóa</button>
+
+  <!-- Modal popup -->
+  <div class="modal">
+    <div class="modal-content">
+      <h3>Chỉnh sửa loại sản phẩm</h3>
+      <form>
+        <label>Tên loại sản phẩm</label>
+        <input type="text" value="NIKE JA 1 'DAY ONE'">
+
+        <label>Mô tả</label>
+        <textarea>Giày jamorant mặt bên</textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn save-btn">Lưu</button>
+          <label for="edit-7" class="btn cancel-btn">Hủy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</td>
+
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>BALO NIKE AIR ELITE 2.0</td>
+              <td>Balo bóng rổ</td>
+              <td>
+  <!-- Nút sửa -->
+  <input type="checkbox" id="edit-8" class="modal-toggle">
+  <label for="edit-8" class="btn edit-btn">Sửa</label>
+
+  <!-- Nút xóa -->
+  <button class="btn delete-btn">Xóa</button>
+
+  <!-- Modal popup -->
+  <div class="modal">
+    <div class="modal-content">
+      <h3>Chỉnh sửa loại sản phẩm</h3>
+      <form>
+        <label>Tên loại sản phẩm</label>
+        <input type="text" value="BALO NIKE AIR ELITE 2.0">
+
+        <label>Mô tả</label>
+        <textarea>Balo bóng rổ</textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn save-btn">Lưu</button>
+          <label for="edit-8" class="btn cancel-btn">Hủy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</td>
+
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>ÁO THUN CLUTCH "SPORT SPACE"</td>
+              <td>Áo xanh</td>
+             <td>
+  <!-- Nút sửa -->
+  <input type="checkbox" id="edit-9" class="modal-toggle">
+  <label for="edit-9" class="btn edit-btn">Sửa</label>
+
+  <!-- Nút xóa -->
+  <button class="btn delete-btn">Xóa</button>
+
+  <!-- Modal popup -->
+  <div class="modal">
+    <div class="modal-content">
+      <h3>Chỉnh sửa loại sản phẩm</h3>
+      <form>
+        <label>Tên loại sản phẩm</label>
+        <input type="text" value="ÁO THUN CLUTCH 'SPORT SPACE'">
+
+        <label>Mô tả</label>
+        <textarea>Áo xanh</textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn save-btn">Lưu</button>
+          <label for="edit-9" class="btn cancel-btn">Hủy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</td>
+
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>BANH NIKE VERSA TACK</td>
+              <td> bóng rổ</td>
+              <td>
+  <!-- Nút sửa -->
+  <input type="checkbox" id="edit-10" class="modal-toggle">
+  <label for="edit-10" class="btn edit-btn">Sửa</label>
+
+  <!-- Nút xóa -->
+  <button class="btn delete-btn">Xóa</button>
+
+  <!-- Modal popup -->
+  <div class="modal">
+    <div class="modal-content">
+      <h3>Chỉnh sửa loại sản phẩm</h3>
+      <form>
+        <label>Tên loại sản phẩm</label>
+        <input type="text" value="BANH NIKE VERSA TACK">
+
+        <label>Mô tả</label>
+        <textarea>bóng rổ</textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn save-btn">Lưu</button>
+          <label for="edit-10" class="btn cancel-btn">Hủy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Danh mục sản phẩm -->
+      <section id="products" class="module">
+        <h2>Danh mục sản phẩm</h2>
+        <form class="form">
+          <input type="text" placeholder="Mã sản phẩm">
+          <input type="text" placeholder="Tên sản phẩm">
+          <input type="text" placeholder="Loại sản phẩm">
+          <input type="file">
+          <textarea placeholder="Mô tả"></textarea>
+          <button type="submit">Thêm / Sửa</button>
+        </form>
+        <table>
+          <thead>
+            <tr>
+              <table>
+  <thead>
+    <tr>
+      <th>Mã</th>
+      <th>Tên</th>
+      <th>Loại</th>
+      <th>Mô tả</th>
+      <th>Thao tác</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Dòng 1 -->
+    <tr>
+      <td>SP01</td>
+      <td>LI-NING WAY OF WADE</td>
+      <td>Giày</td>
+      <td>Giày hồng mặt bên</td>
+      <td>
+        <!-- Checkbox ẩn để điều khiển modal -->
+<input type="checkbox" id="edit-1" class="dm-modal-toggle" />
+
+<!-- Nút sửa -->
+<label for="edit-toggle" class="edit-btn">Sửa</label>
+
+<!-- Modal -->
+<div class="dm-modal">
+  <div class="dm-modal-content">
+    <h3>Sửa thông tin</h3>
+    <div class="dm-modal-row">
+      <label>Tên:</label>
+      <input type="text" placeholder="Nhập tên" value="LI-NING WAY OF WADE">
+    </div>
+    <div class="dm-modal-row">
+      <label>Loại:</label>
+      <input type="Loại" placeholder="Nhập loại" value="Giày">
+    </div>
+    <div class="dm-modal-row">
+      <label>Mô tả:</label>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="dm-actions">
+      <label for="edit-toggle" class="btn-cancel">Hủy</label>
+      <button class="btn-save">Lưu</button>
+    </div>
+  </div>
+</div>
+
+</td>
+      </tr>
+
+    <!-- Dòng 2 -->
+    <tr>
+      <td>SP02</td>
+      <td>NIKE DUNK LOW PREMIUM "PURE PLATINUM"</td>
+      <td>Giày</td>
+      <td>Giày xám mặt bên</td>
+      <td>
+        <!-- Checkbox ẩn để điều khiển modal -->
+<input type="checkbox" id="edit-2" class="dm-modal-toggle" />
+
+<!-- Nút sửa -->
+<label for="edit-toggle" class="edit-btn">Sửa</label>
+
+<!-- Modal -->
+<div class="dm-modal">
+  <div class="dm-modal-content">
+    <h3>Sửa thông tin</h3>
+    <div class="dm-modal-row">
+      <label>Tên:</label>
+      <input type="text" placeholder="Nhập tên" value="LI-NING WAY OF WADE">
+    </div>
+    <div class="dm-modal-row">
+      <label>Loại:</label>
+      <input type="Loại" placeholder="Nhập loại" value="Giày">
+    </div>
+    <div class="dm-modal-row">
+      <label>Mô tả:</label>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="dm-actions">
+      <label for="edit-toggle" class="btn-cancel">Hủy</label>
+      <button class="btn-save">Lưu</button>
+    </div>
+  </div>
+</div>
+
+      </td>
+    </tr>
+
+    <!-- Dòng 3 -->
+    <tr>
+      <td>SP03</td>
+      <td>NIKE DUNK LOW WMNS "SISTERHOOD"</td>
+      <td>Giày</td>
+      <td>Giày trắng mặt bên</td>
+      <td>
+       <!-- Checkbox ẩn để điều khiển modal -->
+<input type="checkbox" id="edit-toggle" class="dm-modal-toggle" />
+
+<!-- Nút sửa -->
+<label for="edit-toggle" class="edit-btn">Sửa</label>
+
+<!-- Modal -->
+<div class="dm-modal">
+  <div class="dm-modal-content">
+    <h3>Sửa thông tin</h3>
+    <div class="dm-modal-row">
+      <label>Tên:</label>
+      <input type="text" placeholder="Nhập tên" value="LI-NING WAY OF WADE">
+    </div>
+    <div class="dm-modal-row">
+      <label>Loại:</label>
+      <input type="Loại" placeholder="Nhập loại" value="Giày">
+    </div>
+    <div class="dm-modal-row">
+      <label>Mô tả:</label>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="dm-actions">
+      <label for="edit-toggle" class="btn-cancel">Hủy</label>
+      <button class="btn-save">Lưu</button>
+    </div>
+  </div>
+</div>
+
+      </td>
+    </tr>
+
+    <!-- Dòng 4 -->
+    <tr>
+      <td>SP04</td>
+      <td>NIKE KD 17 "AUNT PEARL"</td>
+      <td>Giày</td>
+      <td>Giày KD mặt bên</td>
+      <td>
+        <!-- Checkbox ẩn để điều khiển modal -->
+<input type="checkbox" id="edit-toggle" class="dm-modal-toggle" />
+
+<!-- Nút sửa -->
+<label for="edit-toggle" class="edit-btn">Sửa</label>
+
+<!-- Modal -->
+<div class="dm-modal">
+  <div class="dm-modal-content">
+    <h3>Sửa thông tin</h3>
+    <div class="dm-modal-row">
+      <label>Tên:</label>
+      <input type="text" placeholder="Nhập tên" value="LI-NING WAY OF WADE">
+    </div>
+    <div class="dm-modal-row">
+      <label>Loại:</label>
+      <input type="Loại" placeholder="Nhập loại" value="Giày">
+    </div>
+    <div class="dm-modal-row">
+      <label>Mô tả:</label>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="dm-actions">
+      <label for="edit-toggle" class="btn-cancel">Hủy</label>
+      <button class="btn-save">Lưu</button>
+    </div>
+  </div>
+</div>
+
+      </td>
+    </tr>
+
+    <!-- Dòng 5 -->
+    <tr>
+      <td>SP05</td>
+      <td>NIKE LEBRON NEXXT GEN AMPD "I PROMISE"</td>
+      <td>Giày</td>
+      <td>Giày LB mặt bên</td>
+      <td>
+        <!-- Checkbox ẩn để điều khiển modal -->
+<input type="checkbox" id="edit-toggle" class="dm-modal-toggle" />
+
+<!-- Nút sửa -->
+<label for="edit-toggle" class="edit-btn">Sửa</label>
+
+<!-- Modal -->
+<div class="dm-modal">
+  <div class="dm-modal-content">
+    <h3>Sửa thông tin</h3>
+    <div class="dm-modal-row">
+      <label>Tên:</label>
+      <input type="text" placeholder="Nhập tên" value="LI-NING WAY OF WADE">
+    </div>
+    <div class="dm-modal-row">
+      <label>Loại:</label>
+      <input type="Loại" placeholder="Nhập loại" value="Giày">
+    </div>
+    <div class="dm-modal-row">
+      <label>Mô tả:</label>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="dm-actions">
+      <label for="edit-toggle" class="btn-cancel">Hủy</label>
+      <button class="btn-save">Lưu</button>
+    </div>
+  </div>
+</div>
+
+      </td>
+    </tr>
+
+    <!-- Dòng 6 -->
+    <tr>
+      <td>SP06</td>
+      <td>NIKE LEBRON WITNESS 8</td>
+      <td>Giày</td>
+      <td>Giày witness mặt bên</td>
+      <td>
+        <!-- Checkbox ẩn để điều khiển modal -->
+<input type="checkbox" id="edit-toggle" class="dm-modal-toggle" />
+
+<!-- Nút sửa -->
+<label for="edit-toggle" class="edit-btn">Sửa</label>
+
+<!-- Modal -->
+<div class="dm-modal">
+  <div class="dm-modal-content">
+    <h3>Sửa thông tin</h3>
+    <div class="dm-modal-row">
+      <label>Tên:</label>
+      <input type="text" placeholder="Nhập tên" value="LI-NING WAY OF WADE">
+    </div>
+    <div class="dm-modal-row">
+      <label>Loại:</label>
+      <input type="Loại" placeholder="Nhập loại" value="Giày">
+    </div>
+    <div class="dm-modal-row">
+      <label>Mô tả:</label>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="dm-actions">
+      <label for="edit-toggle" class="btn-cancel">Hủy</label>
+      <button class="btn-save">Lưu</button>
+    </div>
+  </div>
+</div>
+
+      </td>
+    </tr>
+
+    <!-- Dòng 7 -->
+    <tr>
+      <td>SP07</td>
+      <td>NIKE JA 1 "DAY ONE"</td>
+      <td>Giày</td>
+      <td>Giày jamorant mặt bên</td>
+      <td>
+        <!-- Checkbox ẩn để điều khiển modal -->
+<input type="checkbox" id="edit-toggle" class="dm-modal-toggle" />
+
+<!-- Nút sửa -->
+<label for="edit-toggle" class="edit-btn">Sửa</label>
+
+<!-- Modal -->
+<div class="dm-modal">
+  <div class="dm-modal-content">
+    <h3>Sửa thông tin</h3>
+    <div class="dm-modal-row">
+      <label>Tên:</label>
+      <input type="text" placeholder="Nhập tên" value="LI-NING WAY OF WADE">
+    </div>
+    <div class="dm-modal-row">
+      <label>Loại:</label>
+      <input type="Loại" placeholder="Nhập loại" value="Giày">
+    </div>
+    <div class="dm-modal-row">
+      <label>Mô tả:</label>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="dm-actions">
+      <label for="edit-toggle" class="btn-cancel">Hủy</label>
+      <button class="btn-save">Lưu</button>
+    </div>
+  </div>
+</div>
+
+      </td>
+    </tr>
+
+    <!-- Dòng 8 -->
+    <tr>
+      <td>SP08</td>
+      <td>BALO NIKE AIR ELITE 2.0</td>
+      <td>Balo</td>
+      <td>Balo bóng rổ</td>
+      <td>
+       <!-- Checkbox ẩn để điều khiển modal -->
+<input type="checkbox" id="edit-toggle" class="dm-modal-toggle" />
+
+<!-- Nút sửa -->
+<label for="edit-toggle" class="edit-btn">Sửa</label>
+
+<!-- Modal -->
+<div class="dm-modal">
+  <div class="dm-modal-content">
+    <h3>Sửa thông tin</h3>
+    <div class="dm-modal-row">
+      <label>Tên:</label>
+      <input type="text" placeholder="Nhập tên" value="LI-NING WAY OF WADE">
+    </div>
+    <div class="dm-modal-row">
+      <label>Loại:</label>
+      <input type="Loại" placeholder="Nhập loại" value="Giày">
+    </div>
+    <div class="dm-modal-row">
+      <label>Mô tả:</label>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="dm-actions">
+      <label for="edit-toggle" class="btn-cancel">Hủy</label>
+      <button class="btn-save">Lưu</button>
+    </div>
+  </div>
+</div>
+
+      </td>
+    </tr>
+
+    <!-- Dòng 9 -->
+    <tr>
+      <td>SP09</td>
+      <td>ÁO THUN CLUTCH "SPORT SPACE"</td>
+      <td>Áo</td>
+      <td>Áo xanh</td>
+      <td>
+        <!-- Checkbox ẩn để điều khiển modal -->
+<input type="checkbox" id="edit-toggle" class="dm-modal-toggle" />
+
+<!-- Nút sửa -->
+<label for="edit-toggle" class="edit-btn">Sửa</label>
+
+<!-- Modal -->
+<div class="dm-modal">
+  <div class="dm-modal-content">
+    <h3>Sửa thông tin</h3>
+    <div class="dm-modal-row">
+      <label>Tên:</label>
+      <input type="text" placeholder="Nhập tên" value="LI-NING WAY OF WADE">
+    </div>
+    <div class="dm-modal-row">
+      <label>Loại:</label>
+      <input type="Loại" placeholder="Nhập loại" value="Giày">
+    </div>
+    <div class="dm-modal-row">
+      <label>Mô tả:</label>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="dm-actions">
+      <label for="edit-toggle" class="btn-cancel">Hủy</label>
+      <button class="btn-save">Lưu</button>
+    </div>
+  </div>
+</div>
+
+      </td>
+    </tr>
+
+    <!-- Dòng 10 -->
+    <tr>
+      <td>SP10</td>
+      <td>BANH NIKE VERSA TACK</td>
+      <td>Banh</td>
+      <td>Bóng rổ</td>
+      <td>
+       <!-- Checkbox ẩn để điều khiển modal -->
+<input type="checkbox" id="edit-10" class="dm-modal-toggle" />
+
+<!-- Nút sửa -->
+<label for="edit-10" class="edit-btn">Sửa</label>
+
+<!-- Modal -->
+<div class="dm-modal">
+  <div class="dm-modal-content">
+    <h3>Sửa thông tin</h3>
+    <div class="dm-modal-row">
+      <label>Tên:</label>
+      <input type="text" placeholder="Nhập tên" value="BANH NIKE VERSA TACK">
+    </div>
+    <div class="dm-modal-row">
+      <label>Loại:</label>
+      <input type="Loại" placeholder="Nhập loại" value="Banh">
+    </div>
+    <div class="dm-modal-row">
+      <label>Mô tả:</label>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="dm-actions">
+      <label for="edit-10" class="btn-cancel">Hủy</label>
+      <button class="btn-save">Lưu</button>
+    </div>
+  </div>
+</div>
+
+    </tr>
+  </tbody>
+</table>
+
+      </section>
+
+      <!-- Nhập sản phẩm -->
+      <section id="import" class="module">
+        <h2>Nhập sản phẩm</h2>
+        <form class="form">
+          <input type="date">
+          <input type="text" placeholder="Mã sản phẩm">
+          <input type="number" placeholder="Số lượng">
+          <input type="number" placeholder="Giá nhập">
+          <button type="submit">Thêm phiếu nhập</button>
+        </form>
+        <table>
+          <thead>
+            <tr>
+              <th>Mã phiếu</th>
+              <th>Ngày nhập</th>
+              <th>Mã SP</th>
+              <th>Số lượng</th>
+              <th>Giá nhập</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PN01</td>
+              <td>11/11/2025</td>
+              <td>SP01</td>
+              <td>122</td>
+              <td>2.720.000</td>
+              <td>Sửa | Hoàn tất</td>
+            </tr>
+            <tr>
+              <td>PN02</td>
+              <td>11/11/2025</td>
+              <td>SP02</td>
+              <td>27</td>
+              <td>2.880.000</td>
+              <td>Sửa | Hoàn tất</td>
+            </tr>
+            <tr>
+              <td>PN03</td>
+              <td>11/11/2025</td>
+              <td>SP03</td>
+              <td>61</td>
+              <td>2.250.000</td>
+              <td>Sửa | Hoàn tất</td>
+            </tr>
+            <tr>
+              <td>PN04</td>
+              <td>11/11/2025</td>
+              <td>SP04</td>
+              <td>50</td>
+              <td>4.840.000</td>
+              <td>Sửa | Hoàn tất</td>
+            </tr>
+            <tr>
+              <td>PN05</td>
+              <td>11/11/2025</td>
+              <td>SP05</td>
+              <td>67</td>
+              <td>3.591.000</td>
+              <td>Sửa | Hoàn tất</td>
+            </tr>
+            <tr>
+              <td>PN06</td>
+              <td>11/11/2025</td>
+              <td>SP06</td>
+              <td>78</td>
+              <td>2.151.000</td>
+              <td>Sửa | Hoàn tất</td>
+            </tr>
+            <tr>
+              <td>PN07</td>
+              <td>11/11/2025</td>
+              <td>SP07</td>
+              <td>45</td>
+              <td>3.187.500</td>
+              <td>Sửa | Hoàn tất</td>
+            </tr>
+            <tr>
+              <td>PN08</td>
+              <td>11/11/2025</td>
+              <td>SP08</td>
+              <td>50</td>
+              <td>378.000</td>
+              <td>Sửa | Hoàn tất</td>
+            </tr>
+            <tr>
+              <td>PN09</td>
+              <td>11/11/2025</td>
+              <td>SP09</td>
+              <td>50</td>
+              <td>279.000</td>
+              <td>Sửa | Hoàn tất</td>
+            </tr>
+            <tr>
+              <td>PN10</td>
+              <td>11/11/2025</td>
+              <td>SP10</td>
+              <td>23</td>
+              <td>977.500</td>
+              <td>Sửa | Hoàn tất</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Giá bán -->
+      <section id="price" class="module">
+        <h2>Quản lý giá bán</h2>
+        <form class="form">
+          <input type="text" placeholder="Loại sản phẩm">
+          <input type="number" placeholder="% lợi nhuận">
+          <button type="submit">Cập nhật</button>
+        </form>
+        <table>
+          <thead>
+            <tr>
+              <th>Loại</th>
+              <th>Giá vốn</th>
+              <th>% Lợi nhuận</th>
+              <th>Giá bán</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Giày</td>
+              <td>2.720.000</td>
+              <td>15%</td>
+              <td>3.200.000</td>
+            </tr>
+            <tr>
+              <td>Giày</td>
+              <td>2.880.000</td>
+              <td>10%</td>
+              <td>3.200.000</td>
+            </tr>
+            <tr>
+              <td>Giày</td>
+              <td>2.250.000</td>
+              <td>10%</td>
+              <td>2.500.000</td>
+            </tr>
+            <tr>
+              <td>Giày</td>
+              <td>4.840.000</td>
+              <td>12%</td>
+              <td>5.500.000</td>
+            </tr>
+            <tr>
+              <td>Giày</td>
+              <td>3.591.000</td>
+              <td>10%</td>
+              <td>3.990.000</td>
+            </tr>
+            <tr>
+              <td>Giày</td>
+              <td>2.151.000</td>
+              <td>15%</td>
+              <td>2.390.000</td>
+            </tr>
+            <tr>
+              <td>Giày</td>
+              <td>3.187.500</td>
+              <td>15%</td>
+              <td>3.750.000</td>
+            </tr>
+            <tr>
+              <td>Balo</td>
+              <td>378.000</td>
+              <td>10%</td>
+              <td>420.000</td>
+            </tr>
+            <tr>
+              <td>Áo</td>
+              <td>279.000</td>
+              <td>10%</td>
+              <td>310.000</td>
+            </tr>
+            <tr>
+              <td>Banh</td>
+              <td>977.500</td>
+              <td>15%</td>
+              <td>1.150.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Đơn hàng -->
+      <section id="orders" class="module">
+        <h2>Đơn đặt hàng</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Mã đơn</th>
+              <th>Khách hàng</th>
+              <th>Ngày đặt</th>
+              <th>Tổng tiền</th>
+              <th>Trạng thái</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DH01</td>
+              <td>Nguyễn Văn An</td>
+              <td>10/11/2025</td>
+              <td>6.400.000</td>
+              <td>Mới đặt</td>
+              <td>Cập nhật</td>
+            </tr>
+            <tr>
+              <td>DH02</td>
+              <td>Trần Quốc Bảo</td>
+              <td>10/11/2025</td>
+              <td>11.900.000</td>
+              <td>Mới đặt</td>
+              <td>Cập nhật</td>
+            </tr>
+            <tr>
+              <td>DH03</td>
+              <td>Phan Minh Hoàng</td>
+              <td>10/11/2025</td>
+              <td>6.910.000</td>
+              <td>Mới đặt</td>
+              <td>Cập nhật</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Tồn kho -->
+      <section id="stock" class="module">
+        <h2>Tồn kho sản phẩm</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Mã SP</th>
+              <th>Tên SP</th>
+              <th>Loại</th>
+              <th>Nhập</th>
+              <th>Xuất</th>
+              <th>Tồn</th>
+              <th>Cảnh báo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SP01</td>
+              <td>LI-NING WAY OF WADE</td>
+              <td>Giày</td>
+              <td>50</td>
+              <td>10</td>
+              <td>40</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>SP02</td>
+              <td>NIKE DUNK LOW PREMIUM "PURE PLATINUM"</td>
+              <td>Giày</td>
+              <td>50</td>
+              <td>10</td>
+              <td>40</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>SP03</td>
+              <td>NIKE DUNK LOW WMNS "SISTERHOOD"</td>
+              <td>Giày</td>
+              <td>50</td>
+              <td>10</td>
+              <td>40</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>SP04</td>
+              <td>NIKE KD 17 "AUNT PEARL"</td>
+              <td>Giày</td>
+              <td>50</td>
+              <td>10</td>
+              <td>40</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>SP05</td>
+              <td>NIKE LEBRON NEXXT GEN AMPD "I PROMISE"</td>
+              <td>Giày</td>
+              <td>50</td>
+              <td>10</td>
+              <td>40</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>SP06</td>
+              <td>NIKE LEBRON WITNESS 8</td>
+              <td>Giày</td>
+              <td>50</td>
+              <td>10</td>
+              <td>40</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>SP07</td>
+              <td>NIKE JA 1 "DAY ONE"</td>
+              <td>Giày</td>
+              <td>50</td>
+              <td>10</td>
+              <td>40</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>SP08</td>
+              <td>BALO NIKE AIR ELITE 2.0</td>
+              <td>Ba lô</td>
+              <td>50</td>
+              <td>10</td>
+              <td>40</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>SP09</td>
+              <td>ÁO THUN CLUTCH "SPORT SPACE"</td>
+              <td>Áo</td>
+              <td>50</td>
+              <td>10</td>
+              <td>40</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>SP10</td>
+              <td>BANH NIKE VERSA TACK</td>
+              <td>Banh</td>
+              <td>50</td>
+              <td>10</td>
+              <td>40</td>
+              <td>--</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

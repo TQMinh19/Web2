@@ -1,5 +1,5 @@
 /* ========================================================
-   1. RESET & BIẾN MẶC ĐỊNH
+   RESET & BIẾN MẶC ĐỊNH
    ======================================================== */
 :root {
   --accent: #222;
@@ -12,19 +12,20 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
 }
 
 /* ========================================================
-   2. HEADER TRANG (LOGO, TÊN SHOP, THANH TÌM KIẾM)
+   HEADER TRANG (LOGO, TÊN SHOP, THANH TÌM KIẾM)
    ======================================================== */
 .giohang {
   max-width: 100%;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  gap: 5px;
+  padding: 0px 20px;
+  gap: 2px;
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
@@ -33,24 +34,62 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding-left: 50px;
-  margin-left: 0px;
-}
-
-.giohang3bk h2 {
-  margin: 0;
 }
 
 .logo {
-  height: 80px;
+  height: 70px;
   width: auto;
+}
+
+.header-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.nav-top ul,
+.nav-bottom ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bottom ul {
+  margin-top: 8px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 8px;
+  transition: color 0.3s;
+}
+
+.header-nav a:hover {
+  color: #a89e9e;
+}
+
+.header-nav .best-seller a {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+.header-nav .best-seller a:hover {
+  color: #d15749;
 }
 
 .timkiem {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 8px;
+  gap: 15px;
+  flex-shrink: 0;
 }
 
 .search-box {
@@ -60,7 +99,19 @@ body {
   border-radius: 20px;
   padding: 5px 10px;
   background-color: white;
-  width: 600px;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+.search-box:hover {
+  border-color: #999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-box:focus-within {
+  border-color: #999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 .search-box input {
@@ -70,6 +121,12 @@ body {
   width: 100%;
   font-size: 13px;
   background-color: white;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+.search-box input::placeholder {
+  color: #999;
+  font-weight: 400;
 }
 
 .search-box button {
@@ -77,11 +134,78 @@ body {
   border: none;
   cursor: pointer;
   font-size: 16px;
+  color: #999;
+  transition: color 0.3s;
+  padding: 0 5px;
+  flex-shrink: 0;
+}
+
+.search-box button:hover {
+  color: #333;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.cart-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.lang-select {
+  cursor: pointer;
+  font-size: 17px;
+  color: #333;
+  font-weight: 600;
+}
+
+.lang-select:hover {
+  color: #a89e9e;
 }
 
 /* ========================================================
-   3. BỐ CỤC CHÍNH (CONTAINER TỔNG & CỘT TRÁI)
+   BỐ CỤC CHÍNH (CONTAINER TỔNG & CỘT TRÁI)
    ======================================================== */
+.page-title {
+  max-width: 1200px; /* Rộng đúng bằng container bên dưới */
+  margin: 30px auto 15px auto; /* auto 2 bên để căn giữa màn hình, cách trên 30px, cách dưới 15px */
+  padding: 0 20px; /* Căn lề trái/phải bằng với container */
+}
+
+.page-title h2 {
+  font-size: 24px;
+  color: black;
+  margin: 0;
+  text-transform: uppercase; /* In hoa chữ Giỏ Hàng (Bạn có thể xóa dòng này nếu không thích) */
+  text-align: center; /* Căn giữa chữ Giỏ Hàng */
+}
 .container {
   display: flex;
   gap: 30px;
@@ -143,7 +267,7 @@ h4 {
 }
 
 /* ========================================================
-   4. LƯỚI HIỂN THỊ SẢN PHẨM (CSS GRID CHUẨN)
+   LƯỚI HIỂN THỊ SẢN PHẨM (CSS GRID CHUẨN)
    ======================================================== */
 .cart-header {
   display: grid !important;
@@ -178,7 +302,7 @@ h4 {
 }
 
 /* ========================================================
-   5. CHI TIẾT BÊN TRONG 1 SẢN PHẨM (ẢNH, TÊN, GIÁ, NÚT)
+   CHI TIẾT BÊN TRONG 1 SẢN PHẨM (ẢNH, TÊN, GIÁ, NÚT)
    ======================================================== */
 .item-info {
   display: flex;
@@ -242,7 +366,126 @@ h4 {
 }
 
 /* ========================================================
-   6. KHU VỰC THANH TOÁN (CỘT PHẢI)
+   Các sản phẩm khác
+   ======================================================== */
+.title-otherproducts {
+  max-width: 1200px; /* Rộng đúng bằng container bên dưới */
+  margin: 30px auto 15px auto; /* auto 2 bên để căn giữa màn hình, cách trên 30px, cách dưới 15px */
+  padding: 0 20px; /* Căn lề trái/phải bằng với container */
+}
+
+.title-otherproducts h2 {
+  font-size: 24px;
+  color: black;
+  margin: 0;
+  text-transform: uppercase; /* In hoa chữ Sản Phẩm Khác (Bạn có thể xóa dòng này nếu không thích) */
+  text-align: center; /* Căn giữa chữ Sản Phẩm Khác */
+}
+
+.otherproducts {
+  max-width: 1200px; /* Rộng đúng bằng container bên dưới */
+  margin: 30px auto 15px auto; /* auto 2 bên để căn giữa màn hình, cách trên 30px, cách dưới 15px */
+  padding: 0px 20px; /* Căn lề trái/phải bằng với container */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.products-section {
+  max-width: 1400px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.product-item {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  text-align: center;
+}
+
+.product-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Khu vực chứa nút phân trang */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* Nút bấm phân trang */
+.page-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Nút của trang đang được chọn (Tô đen) */
+.page-btn.active {
+  background-color: #222;
+  color: white;
+  border-color: #222;
+}
+
+/* ========================================================
+   KHU VỰC THANH TOÁN (CỘT PHẢI)
    ======================================================== */
 .thanhtoan {
   width: 350px;
@@ -329,7 +572,7 @@ button.btn.ghost {
 }
 
 /* ========================================================
-   7. CÁC CLASS DỰ PHÒNG CHƯA DÙNG TỚI
+   CÁC CLASS DỰ PHÒNG CHƯA DÙNG TỚI
    ======================================================== */
 .sanpham {
   display: grid;
@@ -389,7 +632,7 @@ button.btn.ghost {
 }
 
 /* ========================================================
-   8. RESPONSIVE (CHO MÀN HÌNH NHỎ)
+   RESPONSIVE (CHO MÀN HÌNH NHỎ)
    ======================================================== */
 @media (max-width: 980px) {
   .giohang {
